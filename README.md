@@ -1,90 +1,83 @@
+# React-Bootstrap-Text
 
-<p align="center">
-  <a href="https://www.chromatic.com/">
-    <img alt="Chromatic" src="https://avatars2.githubusercontent.com/u/24584319?s=200&v=4" width="60" />
-  </a>
-</p>
+Extends *React-Bootstrap* (https://react-bootstrap.github.io/) with a text component that encapsulates the bootstrap Text Utility classes (https://getbootstrap.com/docs/5.1/utilities/text/).
 
-<h1 align="center">
-  Chromatic's Intro to Storybook React template
-</h1>
+## Example
 
-This template ships with the main React and Storybook configuration files you'll need to get up and running fast.
+```javascript
+import Text from "react-bbootstrap-text";
 
-## 🚅  Quick start
+...
+<Text uppercase bold underline>This text is uppercase, bold and underlined</Text>
+```
 
-1.  **Create the application.**
+Valid props and allowed values are:
 
-    Use [degit](https://github.com/Rich-Harris/degit) to get this template.
+Aligns the text in the wrapping container either for all sizes, or only on specific sized screens
+align: 'start','center','end'
+xs: 'start','center','end'
+sm: 'start','center','end'
+md: 'start','center','end'
+lg: 'start','center','end',
+xl: 'start','center','end',
 
-    ```shell
-    # Clone the template
-    npx degit chromaui/intro-storybook-react-template taskbox
-    ```
+Alighns text similar to align="...":
+start
+center
+end
 
-1.  **Install the dependencies.**
+Wrap text within container (default) or do not wrap text (overflows out of containing container)
+wrap
+nowrap
 
-    Navigate into your new site’s directory and install the necessary dependencies.
+Affect the case of the text:
+lowercase
+uppercase
+capitalize
 
-    ```shell
-    # Navigate to the directory
-    cd taskbox/
+Change the size of the text:
+size: '1','2','3','4','5','6'
 
-    # Install the dependencies
-    yarn
-    ```
+Change the text weight and style:
+bold
+bolder
+normal
+light
+lighter
+italic
+underline
+strike
 
-1.  **Open the source code and start editing!**
+Decoration can also be set using: (None allows resets if Text items are nested)
+decoration: PropTypes.oneOf(['underline','line-through','none']),
 
-    Open the `taskbox` directory in your code editor of choice and building your first component!
+Set monospacing:
+mono
 
-1.  **Browse your stories!**
+Allow word break wihtin words:
+wordbreak
 
-    Run `yarn storybook` to see your component's stories at `http://localhost:6006`
+Affect the lineheight within a block of text
+lineheight: '1','sm','base','lg'
 
-## 🔎 What's inside?
+Reset all values (if within nexted Text blocks)
+reset
 
-A quick look at the top-level files and directories included with this template.
+Also supports the standard react-bootstrap options
+as: Outputs the text as a specific HTML tag - default is span
+bg: set background variant
 
-    .
-    ├── .storybook
-    ├── node_modules
-    ├── public
-    ├── src
-    ├── .env
-    ├── .gitignore
-    ├── LICENSE
-    ├── package.json
-    ├── yarn.lock
-    └── README.md
+For more details look at the bootstrap documentation
 
+# Storybook
 
-1.  **`.storybook`**: This directory contains Storybook's [configuration](https://storybook.js.org/docs/react/configure/overview) files.
+To run storybook clone the project
+npm i
+To install dependancies
 
-2.  **`node_modules`**: This directory contains all of the modules of code that your project depends on (npm packages).
+npm run storybook
+to start storybook
 
-3.  **`public`**: This directory will contain the development and production build of the site.
-
-4.  **`src`**: This directory will contain all of the code related to what you will see on your application.
-
-5.  **`.env`**: Simple text configuration file for controlling the application's environment constants.
-
-6.  **`.gitignore`**: This file tells git which files it should not track or maintain during the development process of your project.
-
-7. **`LICENSE`**: The template is licensed under the MIT licence.
-
-8. **`package.json`**: Standard manifest file for Node.js projects, which typically includes project specific metadata (such as the project's name, the author among other information). It's based on this file that npm will know which packages are necessary to the project.
-
-9. **`yarn.lock`**: This is an automatically generated file based on the exact versions of your npm dependencies that were installed for your project. **(Do not change it manually).**
-
-10. **`README.md`**: A text file containing useful reference information about the project.
-
-## Contribute
-
-If you encounter an issue with the template, we encourage you to open an issue in this template's repository.
-
-## Learning Storybook
-
-1. Read our introductory tutorial at [Learn Storybook](https://storybook.js.org/tutorials/intro-to-storybook/react/en/get-started/).
-2. Learn how to transform your component libraries into design systems in our [Design Systems for Developers](https://storybook.js.org/tutorials/design-systems-for-developers/) tutorial.
-2. See our official documentation at [Storybook](https://storybook.js.org/).
+# Publish component
+npm run compile
+npm publish
