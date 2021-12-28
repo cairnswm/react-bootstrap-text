@@ -34,6 +34,8 @@ function Text(props) {
         className += props.text ? ` text-${props.text}` : ""
         className += props.bg ? ` bg-${props.bg}` : ""
         className += props.reset ? ` text-reset` : ""
+        className += props.truncate ? ` d-inline-block text-truncate` : ""
+
         return className
     }
     const CustomTag =`${props.as ? props.as : "p"}`;
@@ -77,6 +79,7 @@ Text.propTypes = {
     wordbreak: PropTypes.bool,
     reset: PropTypes.bool,
     lineheight: PropTypes.oneOf(['1','sm','base','lg']),
+    truncate: PropTypes.bool,
     text: PropTypes.string,
     bg: PropTypes.string,
     };

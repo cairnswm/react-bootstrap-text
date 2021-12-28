@@ -102,6 +102,10 @@ Reset all values (if within nexted Text blocks)
 reset
 
 
+Truncate Text based on visible size (https://getbootstrap.com/docs/5.1/helpers/text-truncation/)
+
+truncate
+
 Also supports the standard react-bootstrap options
 
 as: Outputs the text as a specific HTML tag - default is span

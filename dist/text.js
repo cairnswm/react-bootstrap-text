@@ -44,6 +44,7 @@ function Text(props) {
     className += props.text ? " text-".concat(props.text) : "";
     className += props.bg ? " bg-".concat(props.bg) : "";
     className += props.reset ? " text-reset" : "";
+    className += props.truncate ? " d-inline-block text-truncate" : "";
     return className;
   };
 
@@ -83,6 +84,7 @@ Text.propTypes = {
   wordbreak: _propTypes.default.bool,
   reset: _propTypes.default.bool,
   lineheight: _propTypes.default.oneOf(['1', 'sm', 'base', 'lg']),
+  truncate: _propTypes.default.bool,
   text: _propTypes.default.string,
   bg: _propTypes.default.string
 };
