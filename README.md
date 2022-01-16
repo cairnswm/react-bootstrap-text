@@ -1,6 +1,6 @@
 # React-Bootstrap-Text
 
-Extends *React-Bootstrap* (https://react-bootstrap.github.io/) with a text component that encapsulates the bootstrap Text Utility classes (https://getbootstrap.com/docs/5.1/utilities/text/).
+Extends *React-Bootstrap* (https://react-bootstrap.github.io/) with a text component that encapsulates the bootstrap Text Utility classes (https://getbootstrap.com/docs/5.1/utilities/text/). If an href is included a link will be created (as will be ignored).
 
 ## Example
 
@@ -14,97 +14,63 @@ import Text from "react-bootstrap-text";
 Valid props and allowed values are:
 
 Aligns the text in the wrapping container either for all sizes, or only on specific sized screens
+- align: 'start','center','end'
+- xs: 'start','center','end'
+- sm: 'start','center','end'
+- md: 'start','center','end'
+- lg: 'start','center','end'
+- xl: 'start','center','end'
 
-align: 'start','center','end'
-
-xs: 'start','center','end'
-
-sm: 'start','center','end'
-
-md: 'start','center','end'
-
-lg: 'start','center','end'
-
-xl: 'start','center','end'
-
-
-Alighns text similar to align="...":
-
-start
-
-center
-
-end
-
+Aligns text similar to align="...":
+- start
+- center
+- end
 
 Wrap text within container (default) or do not wrap text (overflows out of containing container)
-
-wrap
-
-nowrap
-
+- wrap
+- nowrap
 
 Affect the case of the text:
-
-lowercase
-
-uppercase
-
-capitalize
+- lowercase
+- uppercase
+- capitalize
 
 
 Change the size of the text:
-
-size: '1','2','3','4','5','6'
+- size: '1','2','3','4','5','6'
 
 
 Change the text weight and style:
-
-bold
-
-bolder
-
-normal
-
-light
-
-lighter
-
-italic
-
-underline
-
-strike
-
+- bold
+- bolder
+- normal
+- light
+- lighter
+- italic
+- underline
+- strike
 
 Decoration can also be set using: (None allows resets if Text items are nested)
-
-decoration: PropTypes.oneOf(['underline','line-through','none']),
-
+- decoration: 'underline','line-through','none',
 
 Set monospacing:
-
-mono
+- mono
 
 
 Allow word break wihtin words:
-
-wordbreak
+- wordbreak
 
 
 Affect the lineheight within a block of text
+- lineheight: '1','sm','base','lg'
 
-lineheight: '1','sm','base','lg'
 
-
-Reset all values (if within nexted Text blocks)
-
-reset
+Reset all values (if within nested Text blocks)
+- reset
 
 
 Truncate Text based on visible size (https://getbootstrap.com/docs/5.1/helpers/text-truncation/)
-
-truncate
+- truncate
 
 Also supports the standard react-bootstrap options
 

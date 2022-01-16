@@ -41,12 +41,22 @@ function Text(props) {
     const CustomTag =`${props.as ? props.as : "p"}`;
 
     console.log("PROPS",getClass())
+    if (props.href) {
+        return (
+			<>
+				<a href={props.href} style={props.style ? props.style : ""} className={getClass()}>
+					{props.children}
+				</a>
+			</>
+		);
+    }
     return (<>
     <CustomTag
+        style={props.style ? props.style : ""}
         className={getClass()}
             >
             {props.children}
-        </CustomTag>
+    </CustomTag>
     </>)
 }
 
@@ -82,6 +92,7 @@ Text.propTypes = {
     truncate: PropTypes.bool,
     text: PropTypes.string,
     bg: PropTypes.string,
-    };
+    href: PropTypes.string,
+};
 
 export default Text;

@@ -50,7 +50,17 @@ function Text(props) {
 
   var CustomTag = "".concat(props.as ? props.as : "p");
   console.log("PROPS", getClass());
+
+  if (props.href) {
+    return /*#__PURE__*/_react.default.createElement(_react.default.Fragment, null, /*#__PURE__*/_react.default.createElement("a", {
+      href: props.href,
+      style: props.style ? props.style : "",
+      className: getClass()
+    }, props.children));
+  }
+
   return /*#__PURE__*/_react.default.createElement(_react.default.Fragment, null, /*#__PURE__*/_react.default.createElement(CustomTag, {
+    style: props.style ? props.style : "",
     className: getClass()
   }, props.children));
 }
@@ -86,7 +96,8 @@ Text.propTypes = {
   lineheight: _propTypes.default.oneOf(['1', 'sm', 'base', 'lg']),
   truncate: _propTypes.default.bool,
   text: _propTypes.default.string,
-  bg: _propTypes.default.string
+  bg: _propTypes.default.string,
+  href: _propTypes.default.string
 };
 var _default = Text;
 exports.default = _default;
