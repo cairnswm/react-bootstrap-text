@@ -54,13 +54,13 @@ function Text(props) {
   if (props.href) {
     return /*#__PURE__*/_react.default.createElement(_react.default.Fragment, null, /*#__PURE__*/_react.default.createElement("a", {
       href: props.href,
-      style: props.style ? props.style : "",
+      style: props.style ? props.style : {},
       className: getClass()
     }, props.children));
   }
 
   return /*#__PURE__*/_react.default.createElement(_react.default.Fragment, null, /*#__PURE__*/_react.default.createElement(CustomTag, {
-    style: props.style ? props.style : "",
+    style: props.style ? props.style : {},
     className: getClass()
   }, props.children));
 }

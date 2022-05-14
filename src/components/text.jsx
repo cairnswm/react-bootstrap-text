@@ -44,7 +44,7 @@ function Text(props) {
     if (props.href) {
         return (
 			<>
-				<a href={props.href} style={props.style ? props.style : ""} className={getClass()}>
+				<a href={props.href} style={props.style ? props.style : {}} className={getClass()}>
 					{props.children}
 				</a>
 			</>
@@ -52,7 +52,7 @@ function Text(props) {
     }
     return (<>
     <CustomTag
-        style={props.style ? props.style : ""}
+        style={props.style ? props.style : {}}
         className={getClass()}
             >
             {props.children}
