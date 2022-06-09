@@ -1,14 +1,14 @@
 {
   "name": "react-bootstrap-text",
-  "version": "0.5.1",
+  "version": "0.5.2",
   "description": "Extends React-Bootstrap with a text component that encapsulates the bootstrap Text Utility classes",
   "author": "cairnswm",
   "license": "MIT",
   "peerDependencies": {
     "bootstrap": "^5.1.3",
-    "react": "^17.0.1",
+    "react": "17-18",
     "react-bootstrap": "^2.0.4",
-    "react-dom": "^17.0.1",
+    "react-dom": "17-18",
     "react-scripts": "^4.0.1"
   },
   "dependencies": {
