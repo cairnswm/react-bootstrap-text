@@ -1,6 +1,6 @@
 # React-Bootstrap-Text
 
-Extends *React-Bootstrap* (https://react-bootstrap.github.io/) with a text component that encapsulates the bootstrap Text Utility classes (https://getbootstrap.com/docs/5.1/utilities/text/). If an href is included a link will be created (as will be ignored).
+Extends *React-Bootstrap* (https://react-bootstrap.github.io/) with a text component that encapsulates the bootstrap Text Utility classes (https://getbootstrap.com/docs/5.2/utilities/text/). If an href is included a link will be created (as will be ignored).
 
 ## Example
 
@@ -69,34 +69,13 @@ Reset all values (if within nested Text blocks)
 - reset
 
 
-Truncate Text based on visible size (https://getbootstrap.com/docs/5.1/helpers/text-truncation/)
+Truncate Text based on visible size (https://getbootstrap.com/docs/5.2/helpers/text-truncation/)
 - truncate
 
-Also supports the standard react-bootstrap options
-
-as: Outputs the text as a specific HTML tag - default is span
-
-bg: set background variant
+Also supports the following standard react-bootstrap options
+- as: Outputs the text as a specific HTML tag - default is span
+- bg: set background variant
 
 
 For more details look at the bootstrap documentation
 
-
-# Storybook
-
-To run storybook clone the project from the Github repo:
-```
-npm i
-```
-To install dependancies
-
-```
-npm run storybook
-```
-to start storybook
-
-# Publish component
-```
-npm run compile
-npm publish
-```

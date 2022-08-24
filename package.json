@@ -66,10 +66,13 @@
     "cross-env": "^7.0.3"
   },
   "main": "dist/index.js",
-    "private": false,
-    "files": [ "dist", "README.md" ],
-    "repository": {
-        "type": "git",
-        "url": "https://github.com/cairnswm/react-bootstrap-text.git"
-    }
+  "private": false,
+  "files": [
+    "dist",
+    "README.md"
+  ],
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/cairnswm/react-bootstrap-text.git"
+  }
 }
